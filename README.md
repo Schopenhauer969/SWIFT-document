@@ -1,131 +1,191 @@
-# 🦅 Swift — Beginner to Advanced
+# Swift — Beginner to Advanced
 
-A complete Swift learning guide from **Beginner → Intermediate → Advanced**, with practical examples.
+> A complete Swift programming guide from **Beginner → Intermediate → Advanced**, with **English + Khmer explanations** and practical code examples.
 
-> 🇬🇧 **English:** Swift is a modern, safe, fast programming language developed by Apple for building iOS, macOS, watchOS, tvOS, and server-side applications.
->
-> 🇰🇭 **ខ្មែរ:** Swift គឺជាភាសាកម្មវិធីទំនើប ដែលបង្កើតដោយ Apple។ វាត្រូវបានប្រើសម្រាប់បង្កើតកម្មវិធី iOS, macOS, watchOS, tvOS និង Server-side applications។
+![Swift](https://img.shields.io/badge/Swift-6.x-orange?logo=swift)
+![Level](https://img.shields.io/badge/Level-Beginner%20to%20Advanced-blue)
+![Platform](https://img.shields.io/badge/Platform-macOS%20%7C%20Linux%20%7C%20Windows-lightgrey)
 
 ---
 
-# 📚 Table of Contents
+## 📚 Table of Contents
 
 * [1. What is Swift?](#1-what-is-swift)
-* [2. Installation](#2-installation)
-* [3. Hello World](#3-hello-world)
-* [4. Variables and Constants](#4-variables-and-constants)
-* [5. Data Types](#5-data-types)
-* [6. Type Inference](#6-type-inference)
-* [7. Operators](#7-operators)
+* [2. Installing Swift](#2-installing-swift)
+* [3. Your First Swift Program](#3-your-first-swift-program)
+* [4. Comments](#4-comments)
+* [5. Variables and Constants](#5-variables-and-constants)
+* [6. Data Types](#6-data-types)
+* [7. Type Inference](#7-type-inference)
 * [8. Strings](#8-strings)
-* [9. Input](#9-input)
-* [10. Conditions](#10-conditions)
-* [11. Switch](#11-switch)
-* [12. Loops](#12-loops)
-* [13. Arrays](#13-arrays)
-* [14. Sets](#14-sets)
-* [15. Dictionaries](#15-dictionaries)
-* [16. Functions](#16-functions)
-* [17. Function Parameters](#17-function-parameters)
-* [18. Return Values](#18-return-values)
-* [19. Optionals](#19-optionals)
-* [20. Guard](#20-guard)
-* [21. Closures](#21-closures)
-* [22. Higher-Order Functions](#22-higher-order-functions)
-* [23. Structs](#23-structs)
-* [24. Classes](#24-classes)
-* [25. Properties](#25-properties)
-* [26. Methods](#26-methods)
-* [27. Initializers](#27-initializers)
-* [28. Inheritance](#28-inheritance)
-* [29. Protocols](#29-protocols)
-* [30. Extensions](#30-extensions)
-* [31. Enums](#31-enums)
-* [32. Error Handling](#32-error-handling)
-* [33. Generics](#33-generics)
-* [34. Access Control](#34-access-control)
-* [35. Codable](#35-codable)
-* [36. JSON](#36-json)
-* [37. Async/Await](#37-asyncawait)
-* [38. Actors](#38-actors)
-* [39. Concurrency](#39-concurrency)
-* [40. Property Wrappers](#40-property-wrappers)
-* [41. Result Type](#41-result-type)
-* [42. Memory Management](#42-memory-management)
-* [43. Weak and Unowned](#43-weak-and-unowned)
-* [44. Dependency Injection](#44-dependency-injection)
-* [45. MVVM](#45-mvvm)
-* [46. SwiftUI](#46-swiftui)
-* [47. Testing](#47-testing)
-* [48. Advanced Project Structure](#48-advanced-project-structure)
-* [49. Best Practices](#49-best-practices)
-* [50. Learning Roadmap](#50-learning-roadmap)
+* [9. Characters](#9-characters)
+* [10. Numbers](#10-numbers)
+* [11. Boolean](#11-boolean)
+* [12. Operators](#12-operators)
+* [13. Conditions](#13-conditions)
+* [14. Switch](#14-switch)
+* [15. Loops](#15-loops)
+* [16. Arrays](#16-arrays)
+* [17. Sets](#17-sets)
+* [18. Dictionaries](#18-dictionaries)
+* [19. Functions](#19-functions)
+* [20. Function Parameters](#20-function-parameters)
+* [21. Return Values](#21-return-values)
+* [22. Optionals](#22-optionals)
+* [23. Optional Binding](#23-optional-binding)
+* [24. Guard](#24-guard)
+* [25. Nil-Coalescing](#25-nil-coalescing)
+* [26. Structs](#26-structs)
+* [27. Properties](#27-properties)
+* [28. Methods](#28-methods)
+* [29. Initializers](#29-initializers)
+* [30. Enums](#30-enums)
+* [31. Associated Values](#31-associated-values)
+* [32. Classes](#32-classes)
+* [33. Struct vs Class](#33-struct-vs-class)
+* [34. Inheritance](#34-inheritance)
+* [35. Protocols](#35-protocols)
+* [36. Extensions](#36-extensions)
+* [37. Closures](#37-closures)
+* [38. Higher-Order Functions](#38-higher-order-functions)
+* [39. Map](#39-map)
+* [40. Filter](#40-filter)
+* [41. Reduce](#41-reduce)
+* [42. Error Handling](#42-error-handling)
+* [43. Generics](#43-generics)
+* [44. Type Casting](#44-type-casting)
+* [45. Access Control](#45-access-control)
+* [46. Static Members](#46-static-members)
+* [47. Property Wrappers](#47-property-wrappers)
+* [48. Result](#48-result)
+* [49. Codable](#49-codable)
+* [50. JSON Encoding and Decoding](#50-json-encoding-and-decoding)
+* [51. Foundation](#51-foundation)
+* [52. Date and Time](#52-date-and-time)
+* [53. File Handling](#53-file-handling)
+* [54. Async/Await](#54-asyncawait)
+* [55. Tasks](#55-tasks)
+* [56. Actors](#56-actors)
+* [57. MainActor](#57-mainactor)
+* [58. Sendable](#58-sendable)
+* [59. Memory Management](#59-memory-management)
+* [60. Weak and Unowned](#60-weak-and-unowned)
+* [61. Protocol-Oriented Programming](#61-protocol-oriented-programming)
+* [62. Dependency Injection](#62-dependency-injection)
+* [63. Generics + Protocols](#63-generics--protocols)
+* [64. Swift Package Manager](#64-swift-package-manager)
+* [65. Testing](#65-testing)
+* [66. SwiftUI Introduction](#66-swiftui-introduction)
+* [67. MVVM](#67-mvvm)
+* [68. Networking](#68-networking)
+* [69. REST API](#69-rest-api)
+* [70. Advanced Swift Project](#70-advanced-swift-project)
+* [71. Best Practices](#71-best-practices)
+* [72. Learning Roadmap](#72-learning-roadmap)
 
 ---
 
 # 1. What is Swift?
 
-## English
+Swift is a modern programming language created by Apple.
 
-Swift is a strongly typed, compiled programming language created by Apple.
+Swift is commonly used for:
 
-It focuses on:
+* iOS
+* iPadOS
+* macOS
+* watchOS
+* tvOS
+* visionOS
+* Server-side applications
+* Command-line tools
+* Linux applications
+* Windows development
+* WebAssembly
+* Embedded systems
+
+### English
+
+Swift focuses on:
 
 * Safety
 * Performance
 * Readability
 * Modern syntax
 * Type safety
+* Memory safety
 * Concurrency
 
-## ខ្មែរ
+### ខ្មែរ
 
-Swift គឺជា programming language ដែលមាន **strong typing** និងត្រូវបាន compile ទៅជា machine code។
+Swift គឺជា programming language ទំនើបដែលបង្កើតឡើងដោយ Apple។
 
-ចំណុចសំខាន់ៗ៖
+វាត្រូវបានប្រើសម្រាប់៖
 
-* សុវត្ថិភាព
-* ល្បឿនលឿន
-* Code ងាយអាន
-* Syntax ទំនើប
-* Type Safety
-* Concurrency
+* បង្កើត iPhone App
+* iPad App
+* macOS App
+* Apple Watch App
+* Apple TV App
+* Vision Pro App
+* Backend / Server
+* Command Line
+* Linux
+* Windows
+* WebAssembly
+* Embedded systems
 
 ---
 
-# 2. Installation
+# 2. Installing Swift
 
-## macOS
-
-Install Xcode from the Mac App Store.
-
-Then check Swift:
+Swift can be installed on macOS, Linux, and Windows. The official getting-started documentation recommends checking the installation with:
 
 ```bash
 swift --version
 ```
 
-You can also use Swift Package Manager.
+Example:
 
 ```bash
-swift package init --type executable
+swift --version
 ```
 
-Run:
+You should receive information about the installed Swift toolchain.
+
+### ខ្មែរ
+
+បន្ទាប់ពីដំឡើង Swift រួច អាចពិនិត្យ version ដោយ៖
 
 ```bash
-swift run
+swift --version
 ```
+
+Swift also includes Swift Package Manager (SwiftPM) for managing Swift projects and dependencies.
 
 ---
 
-# 3. Hello World
+# 3. Your First Swift Program
+
+Create:
+
+```text
+main.swift
+```
+
+Code:
 
 ```swift
 print("Hello, Swift!")
 ```
 
-### Output
+Run:
+
+```bash
+swift main.swift
+```
+
+Output:
 
 ```text
 Hello, Swift!
@@ -133,96 +193,139 @@ Hello, Swift!
 
 ### English
 
-`print()` displays information in the console.
+`print()` displays information in the terminal.
 
 ### ខ្មែរ
 
-`print()` ប្រើសម្រាប់បង្ហាញព័ត៌មានទៅកាន់ console។
+`print()` ប្រើសម្រាប់បង្ហាញព័ត៌មាននៅក្នុង Terminal។
 
 ---
 
-# 4. Variables and Constants
+# 4. Comments
+
+## Single-line comment
+
+```swift
+// This is a comment
+
+print("Hello")
+```
+
+## Multi-line comment
+
+```swift
+/*
+ This is a
+ multi-line comment
+*/
+
+print("Swift")
+```
+
+### ខ្មែរ
+
+Comment គឺជាអត្ថបទសម្រាប់អ្នក developer អាន។ Compiler មិន execute comment ទេ។
+
+---
+
+# 5. Variables and Constants
 
 Swift has:
 
 * `let` → constant
 * `var` → variable
 
+## Constant
+
 ```swift
-let name = "Heng"
-var age = 20
+let name = "Dara"
 
 print(name)
-print(age)
+```
+
+You cannot change it:
+
+```swift
+let age = 20
+
+// age = 21
+```
+
+## Variable
+
+```swift
+var age = 20
 
 age = 21
 
 print(age)
 ```
 
-## English
+### English
 
-Use `let` when a value should not change.
+Use `let` by default.
 
-Use `var` when a value can change.
-
-## ខ្មែរ
-
-ប្រើ `let` នៅពេល value មិនត្រូវការផ្លាស់ប្តូរ។
-
-ប្រើ `var` នៅពេល value អាចផ្លាស់ប្តូរ។
-
----
-
-# 5. Data Types
-
-Swift supports many built-in types.
-
-```swift
-let name: String = "Heng"
-let age: Int = 20
-let price: Double = 19.99
-let isStudent: Bool = true
-let grade: Character = "A"
-
-print(name)
-print(age)
-print(price)
-print(isStudent)
-print(grade)
-```
-
-Common types:
-
-| Type      | Example   |
-| --------- | --------- |
-| String    | `"Hello"` |
-| Int       | `100`     |
-| Double    | `10.5`    |
-| Float     | `10.5`    |
-| Bool      | `true`    |
-| Character | `"A"`     |
+Use `var` only when the value needs to change.
 
 ### ខ្មែរ
 
-Data Type គឺជាប្រភេទទិន្នន័យដែល variable អាចរក្សាទុកបាន។
+ប្រើ `let` ជាមុនសិន ព្រោះវាមានសុវត្ថិភាពជាង។
+
+ប្រើ `var` នៅពេលតម្លៃត្រូវការផ្លាស់ប្តូរ។
 
 ---
 
-# 6. Type Inference
+# 6. Data Types
+
+Swift has many built-in types.
+
+```swift
+let name: String = "Dara"
+let age: Int = 25
+let price: Double = 19.99
+let isActive: Bool = true
+let letter: Character = "A"
+```
+
+Example:
+
+```swift
+let username: String = "admin"
+let age: Int = 25
+let salary: Double = 1500.50
+let isAdmin: Bool = true
+
+print(username)
+print(age)
+print(salary)
+print(isAdmin)
+```
+
+### ខ្មែរ
+
+Data Type ប្រាប់ Swift ថា value មួយមានប្រភេទអ្វី។
+
+ឧទាហរណ៍៖
+
+```text
+String     → អក្សរ
+Int        → ចំនួនគត់
+Double     → ចំនួនទសភាគ
+Bool       → true / false
+Character  → តួអក្សរមួយ
+```
+
+---
+
+# 7. Type Inference
 
 Swift can automatically determine the type.
 
 ```swift
-let name = "Heng"
-let age = 20
-let price = 99.99
+let name = "Dara"
+let age = 25
+let price = 10.50
 let active = true
-
-print(name)
-print(age)
-print(price)
-print(active)
 ```
 
 Swift understands:
@@ -240,7 +343,132 @@ Swift អាចស្គាល់ Data Type ដោយស្វ័យប្រវ
 
 ---
 
-# 7. Operators
+# 8. Strings
+
+```swift
+let firstName = "Dara"
+let lastName = "Kim"
+
+let fullName = firstName + " " + lastName
+
+print(fullName)
+```
+
+String interpolation:
+
+```swift
+let name = "Dara"
+let age = 25
+
+print("My name is \(name)")
+print("I am \(age) years old")
+```
+
+Output:
+
+```text
+My name is Dara
+I am 25 years old
+```
+
+### Multiline String
+
+```swift
+let message = """
+Hello
+Welcome to Swift
+This is a multiline string
+"""
+
+print(message)
+```
+
+---
+
+# 9. Characters
+
+```swift
+let letter: Character = "A"
+
+print(letter)
+```
+
+Character is different from String.
+
+```swift
+let letter: Character = "A"
+let word: String = "Apple"
+```
+
+---
+
+# 10. Numbers
+
+## Int
+
+```swift
+let age: Int = 25
+let score: Int = 100
+```
+
+## Double
+
+```swift
+let price: Double = 19.99
+```
+
+## Float
+
+```swift
+let height: Float = 1.75
+```
+
+Example:
+
+```swift
+let a = 10
+let b = 20
+
+let result = a + b
+
+print(result)
+```
+
+---
+
+# 11. Boolean
+
+Boolean has two values:
+
+```swift
+true
+false
+```
+
+Example:
+
+```swift
+let isLoggedIn = true
+
+if isLoggedIn {
+    print("User is logged in")
+} else {
+    print("User is not logged in")
+}
+```
+
+### ខ្មែរ
+
+`Bool` មានតែ ២ តម្លៃ៖
+
+```text
+true  → ពិត
+false → មិនពិត
+```
+
+---
+
+# 12. Operators
 
 ## Arithmetic
 
@@ -261,100 +489,27 @@ print(a % b)
 let age = 20
 
 print(age == 20)
-print(age != 18)
+print(age != 20)
 print(age > 18)
 print(age < 30)
 print(age >= 20)
 print(age <= 20)
 ```
 
-## Logical Operators
+## Logical
 
 ```swift
-let age = 20
+let age = 25
 let hasID = true
 
 print(age >= 18 && hasID)
-print(age >= 18 || hasID)
+print(age < 18 || hasID)
 print(!hasID)
 ```
 
-### ខ្មែរ
-
-Operators ប្រើសម្រាប់គណនា ប្រៀបធៀប និង logical operations។
-
 ---
 
-# 8. Strings
-
-```swift
-let firstName = "Heng"
-let lastName = "Developer"
-
-let fullName = firstName + " " + lastName
-
-print(fullName)
-```
-
-String interpolation:
-
-```swift
-let name = "Heng"
-let age = 20
-
-print("My name is \(name)")
-print("I am \(age) years old")
-```
-
-Multiline String:
-
-```swift
-let message = """
-Hello
-Welcome to Swift
-Programming is fun!
-"""
-
-print(message)
-```
-
-### ខ្មែរ
-
-String interpolation ប្រើ `\(value)` ដើម្បីបញ្ចូល variable ទៅក្នុង String។
-
----
-
-# 9. Input
-
-```swift
-print("Enter your name:")
-
-if let name = readLine() {
-    print("Hello, \(name)!")
-}
-```
-
-Input number:
-
-```swift
-print("Enter your age:")
-
-if let input = readLine(),
-   let age = Int(input) {
-
-    print("Your age is \(age)")
-}
-```
-
-### ខ្មែរ
-
-`readLine()` ប្រើសម្រាប់ទទួល input ពី user។
-
-ដោយសារ `readLine()` អាច return `nil` យើងត្រូវ handle optional។
-
----
-
-# 10. Conditions
+# 13. Conditions
 
 ## if
 
@@ -396,55 +551,53 @@ if score >= 90 {
 
 ### ខ្មែរ
 
-`if` ប្រើសម្រាប់ពិនិត្យលក្ខខណ្ឌ។
+`if` ប្រើសម្រាប់សម្រេចចិត្តតាមលក្ខខណ្ឌ។
 
 ---
 
-# 11. Switch
+# 14. Switch
 
 ```swift
-let day = 3
+let day = 2
 
 switch day {
 case 1:
     print("Monday")
+
 case 2:
     print("Tuesday")
+
 case 3:
     print("Wednesday")
-case 4:
-    print("Thursday")
-case 5:
-    print("Friday")
-case 6:
-    print("Saturday")
-case 7:
-    print("Sunday")
+
 default:
-    print("Invalid day")
+    print("Other day")
 }
 ```
 
-### Multiple cases
+Switch with String:
 
 ```swift
-let character = "a"
+let role = "admin"
 
-switch character {
-case "a", "e", "i", "o", "u":
-    print("Vowel")
+switch role {
+case "admin":
+    print("Administrator")
+
+case "user":
+    print("Normal User")
+
+case "guest":
+    print("Guest")
+
 default:
-    print("Consonant")
+    print("Unknown role")
 }
 ```
-
-### ខ្មែរ
-
-`switch` មានប្រយោជន៍សម្រាប់ពិនិត្យ cases ច្រើន។
 
 ---
 
-# 12. Loops
+# 15. Loops
 
 ## For-in
 
@@ -464,10 +617,10 @@ Output:
 5
 ```
 
-## Array Loop
+## Array loop
 
 ```swift
-let names = ["Dara", "Sok", "Heng"]
+let names = ["Dara", "Sok", "Kosal"]
 
 for name in names {
     print(name)
@@ -477,11 +630,11 @@ for name in names {
 ## While
 
 ```swift
-var count = 1
+var number = 1
 
-while count <= 5 {
-    print(count)
-    count += 1
+while number <= 5 {
+    print(number)
+    number += 1
 }
 ```
 
@@ -496,13 +649,9 @@ repeat {
 } while number <= 5
 ```
 
-### ខ្មែរ
-
-Loop ប្រើសម្រាប់ធ្វើ code ដដែលៗច្រើនដង។
-
 ---
 
-# 13. Arrays
+# 16. Arrays
 
 Array stores multiple values in order.
 
@@ -510,7 +659,13 @@ Array stores multiple values in order.
 var fruits = ["Apple", "Banana", "Orange"]
 
 print(fruits)
+```
+
+Access:
+
+```swift
 print(fruits[0])
+print(fruits[1])
 ```
 
 Add:
@@ -522,135 +677,126 @@ fruits.append("Mango")
 Remove:
 
 ```swift
-fruits.remove(at: 1)
-```
-
-Loop:
-
-```swift
-for fruit in fruits {
-    print(fruit)
-}
+fruits.remove(at: 0)
 ```
 
 Complete example:
 
 ```swift
-var numbers = [10, 20, 30]
+var fruits = ["Apple", "Banana", "Orange"]
 
-numbers.append(40)
-numbers.append(50)
+fruits.append("Mango")
 
-print(numbers)
-
-for number in numbers {
-    print(number)
+for fruit in fruits {
+    print(fruit)
 }
 ```
 
-### ខ្មែរ
-
-Array គឺជា collection ដែលរក្សាទុក values តាមលំដាប់ index។
-
 ---
 
-# 14. Sets
+# 17. Sets
 
 Set stores unique values.
 
 ```swift
-var languages: Set<String> = [
-    "Swift",
-    "Python",
-    "Java"
-]
+var numbers: Set<Int> = [1, 2, 3, 3, 4]
 
-languages.insert("Go")
-languages.insert("Swift")
-
-print(languages)
+print(numbers)
 ```
 
-`Swift` នឹងមិនត្រូវបានបន្ថែមម្ដងទៀតទេ ព្រោះ Set មិនរក្សាទុក duplicate។
+The duplicate `3` is stored only once.
 
-### English
+Add:
 
-A `Set` is useful when uniqueness is important.
+```swift
+numbers.insert(5)
+```
 
-### ខ្មែរ
+Remove:
 
-`Set` មានប្រយោជន៍នៅពេលយើងត្រូវការទិន្នន័យដែលមិនមាន duplicate។
+```swift
+numbers.remove(2)
+```
+
+Check:
+
+```swift
+print(numbers.contains(3))
+```
 
 ---
 
-# 15. Dictionaries
+# 18. Dictionaries
 
 Dictionary stores key-value pairs.
 
 ```swift
-var student: [String: Any] = [
-    "name": "Heng",
-    "age": 20,
-    "active": true
+var user = [
+    "name": "Dara",
+    "role": "admin"
 ]
 
-print(student["name"] ?? "Unknown")
-print(student["age"] ?? 0)
+print(user["name"] ?? "Unknown")
 ```
 
-Typed dictionary:
+Add:
 
 ```swift
-var scores: [String: Int] = [
-    "Math": 90,
-    "English": 85,
-    "Physics": 88
+user["email"] = "dara@example.com"
+```
+
+Update:
+
+```swift
+user["role"] = "user"
+```
+
+Remove:
+
+```swift
+user.removeValue(forKey: "role")
+```
+
+Complete:
+
+```swift
+var user: [String: String] = [
+    "name": "Dara",
+    "email": "dara@example.com"
 ]
 
-print(scores["Math"] ?? 0)
-```
-
-Loop:
-
-```swift
-for (subject, score) in scores {
-    print("\(subject): \(score)")
+if let name = user["name"] {
+    print(name)
 }
 ```
-
-### ខ្មែរ
-
-Dictionary រក្សាទុក data ជា `key: value`។
 
 ---
 
-# 16. Functions
+# 19. Functions
+
+A function is reusable code.
 
 ```swift
-func greet() {
-    print("Hello, Swift!")
+func sayHello() {
+    print("Hello Swift")
 }
 
-greet()
+sayHello()
 ```
 
 Function with parameter:
 
 ```swift
 func greet(name: String) {
-    print("Hello, \(name)!")
+    print("Hello \(name)")
 }
 
-greet(name: "Heng")
+greet(name: "Dara")
 ```
-
-### ខ្មែរ
-
-Function គឺជា block នៃ code ដែលអាចហៅប្រើឡើងវិញបាន។
 
 ---
 
-# 17. Function Parameters
+# 20. Function Parameters
 
 ```swift
 func add(a: Int, b: Int) {
@@ -664,27 +810,25 @@ Custom argument labels:
 
 ```swift
 func greet(person name: String) {
-    print("Hello, \(name)")
+    print("Hello \(name)")
 }
 
-greet(person: "Heng")
+greet(person: "Dara")
 ```
 
-Ignoring argument label:
+No argument label:
 
 ```swift
-func multiply(_ a: Int, _ b: Int) -> Int {
-    return a * b
+func greet(_ name: String) {
+    print("Hello \(name)")
 }
 
-let result = multiply(5, 4)
-
-print(result)
+greet("Dara")
 ```
 
 ---
 
-# 18. Return Values
+# 21. Return Values
 
 ```swift
 func add(_ a: Int, _ b: Int) -> Int {
@@ -696,93 +840,74 @@ let result = add(10, 20)
 print(result)
 ```
 
-Multiple calculations:
+Short form:
 
 ```swift
-func calculate(a: Double, b: Double) -> (sum: Double, difference: Double) {
-    return (
-        sum: a + b,
-        difference: a - b
-    )
+func multiply(_ a: Int, _ b: Int) -> Int {
+    a * b
 }
 
-let result = calculate(a: 20, b: 5)
+print(multiply(5, 4))
+```
 
-print(result.sum)
-print(result.difference)
+---
+
+# 22. Optionals
+
+Optional means a value may exist or may be `nil`.
+
+```swift
+var username: String? = "Dara"
+
+print(username)
+```
+
+Optional with nil:
+
+```swift
+var email: String? = nil
+
+print(email)
 ```
 
 ### ខ្មែរ
 
-Function អាច return value តាមរយៈ `-> ReturnType`។
-
----
-
-# 19. Optionals
-
-Optionals are one of the most important Swift concepts.
-
-```swift
-var name: String? = "Heng"
-
-print(name)
-```
-
-An optional can contain:
+Optional គឺមានន័យថា value អាចមាន ឬមិនមាន។
 
 ```text
-value
+String
+String?
 ```
 
-or:
+`String?` អាចមាន:
+
+```text
+"Hello"
+```
+
+ឬ
 
 ```text
 nil
 ```
 
-Example:
+---
+
+# 23. Optional Binding
+
+Use `if let`:
 
 ```swift
-var username: String? = nil
+let username: String? = "Dara"
 
-if let username = username {
-    print(username)
+if let name = username {
+    print("Username: \(name)")
 } else {
     print("No username")
 }
 ```
 
-## Optional Binding
-
-```swift
-let input = "25"
-
-if let age = Int(input) {
-    print("Age: \(age)")
-}
-```
-
-## Nil Coalescing
-
-```swift
-let username: String? = nil
-
-let name = username ?? "Guest"
-
-print(name)
-```
-
-### ខ្មែរ
-
-Optional មានន័យថា value អាចមាន ឬមិនមាន (`nil`)។
-
-Swift ប្រើ Optional ដើម្បីបង្កើន safety និងកាត់បន្ថយ runtime errors។
-
----
-
-# 20. Guard
-
-`guard` is useful for early exit.
+Using `guard let`:
 
 ```swift
 func printUsername(_ username: String?) {
@@ -794,135 +919,107 @@ func printUsername(_ username: String?) {
     print("Username: \(username)")
 }
 
-printUsername("Heng")
+printUsername("Dara")
 printUsername(nil)
 ```
 
-### ខ្មែរ
-
-`guard` ប្រើសម្រាប់ពិនិត្យ condition ហើយចាកចេញពី function ប្រសិនបើ condition មិនត្រឹមត្រូវ។
-
 ---
 
-# 21. Closures
+# 24. Guard
 
-Closure is an anonymous function.
-
-```swift
-let greet = {
-    print("Hello!")
-}
-
-greet()
-```
-
-Closure with parameters:
+`guard` is useful when a function should exit early.
 
 ```swift
-let add = { (a: Int, b: Int) -> Int in
-    return a + b
+func login(username: String?, password: String?) {
+    guard let username = username,
+          let password = password else {
+        print("Missing credentials")
+        return
+    }
+
+    print("Login with \(username) / \(password)")
 }
 
-print(add(10, 20))
-```
-
-Short syntax:
-
-```swift
-let numbers = [1, 2, 3, 4, 5]
-
-let doubled = numbers.map { number in
-    number * 2
-}
-
-print(doubled)
+login(username: "admin", password: "1234")
+login(username: nil, password: "1234")
 ```
 
 ### ខ្មែរ
 
-Closure គឺជា function ដែលគ្មានឈ្មោះ ហើយអាចរក្សាទុកក្នុង variable ឬផ្ញើទៅ function ផ្សេងបាន។
+`guard` ជួយឱ្យ code អានងាយ ដោយដោះស្រាយ error/invalid condition នៅដើម function។
 
 ---
 
-# 22. Higher-Order Functions
+# 25. Nil-Coalescing
 
-Swift collections provide powerful methods.
-
-## map
+Use `??` to provide a default value.
 
 ```swift
-let numbers = [1, 2, 3, 4, 5]
+let username: String? = nil
 
-let squares = numbers.map {
-    $0 * $0
-}
+let name = username ?? "Guest"
 
-print(squares)
+print(name)
 ```
 
-## filter
+Output:
 
-```swift
-let numbers = [1, 2, 3, 4, 5, 6]
-
-let evenNumbers = numbers.filter {
-    $0 % 2 == 0
-}
-
-print(evenNumbers)
+```text
+Guest
 ```
-
-## reduce
-
-```swift
-let numbers = [1, 2, 3, 4, 5]
-
-let total = numbers.reduce(0) {
-    $0 + $1
-}
-
-print(total)
-```
-
-## sorted
-
-```swift
-let numbers = [5, 2, 8, 1, 4]
-
-let sortedNumbers = numbers.sorted()
-
-print(sortedNumbers)
-```
-
-### ខ្មែរ
-
-Higher-order functions អាចធ្វើឱ្យ collection processing មានភាពស្អាត និងខ្លី។
 
 ---
 
-# 23. Structs
+# 26. Structs
 
 Struct is a value type.
 
 ```swift
 struct User {
     let name: String
+    let age: Int
+}
+
+let user = User(
+    name: "Dara",
+    age: 25
+)
+
+print(user.name)
+print(user.age)
+```
+
+### ខ្មែរ
+
+`struct` គឺជា type ដែលមាន properties និង methods។
+
+វាមាន value semantics។
+
+---
+
+# 27. Properties
+
+```swift
+struct User {
+    var name: String
     var age: Int
 
-    func introduce() {
-        print("My name is \(name), age \(age)")
+    var description: String {
+        "\(name) is \(age) years old"
     }
 }
 
 let user = User(
-    name: "Heng",
-    age: 20
+    name: "Dara",
+    age: 25
 )
 
-user.introduce()
+print(user.description)
 ```
 
-### Mutating Method
+---
+
+# 28. Methods
 
 ```swift
 struct Counter {
@@ -941,274 +1038,36 @@ counter.increment()
 print(counter.value)
 ```
 
-### ខ្មែរ
+### Important
 
-`struct` ប្រើសម្រាប់បង្កើត custom data type និងជា **value type**។
+A mutating method is required when a value-type instance modifies its own stored properties.
 
 ---
 
-# 24. Classes
-
-Class is a reference type.
+# 29. Initializers
 
 ```swift
-class User {
+struct User {
     let name: String
-    var age: Int
+    let age: Int
 
     init(name: String, age: Int) {
         self.name = name
         self.age = age
     }
-
-    func introduce() {
-        print("My name is \(name), age \(age)")
-    }
 }
 
 let user = User(
-    name: "Heng",
-    age: 20
+    name: "Dara",
+    age: 25
 )
 
-user.introduce()
-```
-
-### Struct vs Class
-
-| Struct                     | Class                            |
-| -------------------------- | -------------------------------- |
-| Value type                 | Reference type                   |
-| No inheritance             | Supports inheritance             |
-| Usually preferred for data | Useful for shared identity/state |
-| Copy semantics             | Shared reference                 |
-
----
-
-# 25. Properties
-
-```swift
-struct Person {
-    var firstName: String
-    var lastName: String
-
-    var fullName: String {
-        return "\(firstName) \(lastName)"
-    }
-}
-
-let person = Person(
-    firstName: "Heng",
-    lastName: "Developer"
-)
-
-print(person.fullName)
-```
-
-## Property Observer
-
-```swift
-class BankAccount {
-    var balance: Double = 0 {
-        willSet {
-            print("New balance: \(newValue)")
-        }
-
-        didSet {
-            print("Old balance: \(oldValue)")
-        }
-    }
-}
-
-let account = BankAccount()
-
-account.balance = 100
-account.balance = 200
-```
-
-### ខ្មែរ
-
-Property គឺជា data ដែលភ្ជាប់ជាមួយ type។
-
----
-
-# 26. Methods
-
-```swift
-struct Calculator {
-
-    func add(_ a: Int, _ b: Int) -> Int {
-        return a + b
-    }
-
-    func subtract(_ a: Int, _ b: Int) -> Int {
-        return a - b
-    }
-}
-
-let calculator = Calculator()
-
-print(calculator.add(10, 5))
-print(calculator.subtract(10, 5))
+print(user.name)
 ```
 
 ---
 
-# 27. Initializers
-
-```swift
-struct Product {
-    let name: String
-    let price: Double
-
-    init(name: String, price: Double) {
-        self.name = name
-        self.price = price
-    }
-}
-
-let product = Product(
-    name: "Laptop",
-    price: 1200
-)
-
-print(product.name)
-print(product.price)
-```
-
-### Failable Initializer
-
-```swift
-struct User {
-    let name: String
-
-    init?(name: String) {
-        guard !name.isEmpty else {
-            return nil
-        }
-
-        self.name = name
-    }
-}
-
-if let user = User(name: "Heng") {
-    print(user.name)
-}
-```
-
----
-
-# 28. Inheritance
-
-Classes can inherit from other classes.
-
-```swift
-class Animal {
-    let name: String
-
-    init(name: String) {
-        self.name = name
-    }
-
-    func speak() {
-        print("Animal sound")
-    }
-}
-
-class Dog: Animal {
-
-    override func speak() {
-        print("Woof!")
-    }
-}
-
-let dog = Dog(name: "Buddy")
-
-print(dog.name)
-dog.speak()
-```
-
-### ខ្មែរ
-
-Inheritance អនុញ្ញាតឱ្យ class មួយទទួល properties និង methods ពី class មួយទៀត។
-
----
-
-# 29. Protocols
-
-Protocols define requirements.
-
-```swift
-protocol Animal {
-    var name: String { get }
-
-    func speak()
-}
-
-struct Dog: Animal {
-    let name: String
-
-    func speak() {
-        print("Woof!")
-    }
-}
-
-struct Cat: Animal {
-    let name: String
-
-    func speak() {
-        print("Meow!")
-    }
-}
-
-let dog = Dog(name: "Buddy")
-let cat = Cat(name: "Kitty")
-
-dog.speak()
-cat.speak()
-```
-
-### ខ្មែរ
-
-Protocol គឺជា contract ដែលកំណត់ថា type មួយត្រូវមាន properties ឬ methods អ្វីខ្លះ។
-
----
-
-# 30. Extensions
-
-Extensions add functionality to an existing type.
-
-```swift
-extension String {
-    func isLong() -> Bool {
-        return count > 10
-    }
-}
-
-let text = "Hello Swift Programming"
-
-print(text.isLong())
-```
-
-Another example:
-
-```swift
-extension Int {
-    var squared: Int {
-        return self * self
-    }
-}
-
-print(5.squared)
-```
-
-### ខ្មែរ
-
-Extension អនុញ្ញាតឱ្យយើងបន្ថែម functionality ទៅ type ដែលមានស្រាប់ ដោយមិនចាំបាច់កែ original definition។
-
----
-
-# 31. Enums
+# 30. Enums
 
 ```swift
 enum Direction {
@@ -1223,123 +1082,415 @@ let direction = Direction.north
 switch direction {
 case .north:
     print("Going North")
+
 case .south:
     print("Going South")
+
 case .east:
     print("Going East")
+
 case .west:
     print("Going West")
 }
 ```
 
-## Enum with Raw Value
+---
+
+# 31. Associated Values
+
+Enums can store associated data.
 
 ```swift
-enum HTTPStatus: Int {
-    case ok = 200
-    case notFound = 404
-    case serverError = 500
-}
-
-let status = HTTPStatus.ok
-
-print(status.rawValue)
-```
-
-## Enum with Associated Values
-
-```swift
-enum Result {
+enum NetworkResult {
     case success(String)
     case failure(String)
 }
 
-let result = Result.success("Data loaded")
+let result = NetworkResult.success("Data loaded")
 
 switch result {
-case .success(let message):
-    print(message)
+case .success(let data):
+    print("Success: \(data)")
 
 case .failure(let error):
-    print(error)
+    print("Error: \(error)")
 }
+```
+
+---
+
+# 32. Classes
+
+Classes are reference types.
+
+```swift
+class User {
+    var name: String
+
+    init(name: String) {
+        self.name = name
+    }
+
+    func sayHello() {
+        print("Hello \(name)")
+    }
+}
+
+let user = User(name: "Dara")
+
+user.sayHello()
+```
+
+---
+
+# 33. Struct vs Class
+
+| Feature       | Struct           | Class      |
+| ------------- | ---------------- | ---------- |
+| Type          | Value            | Reference  |
+| Inheritance   | No               | Yes        |
+| Deinitializer | No               | Yes        |
+| Copy behavior | Value copy       | Reference  |
+| Identity      | No               | Yes        |
+| `mutating`    | Sometimes needed | Not needed |
+
+Example:
+
+```swift
+struct CounterStruct {
+    var value: Int
+}
+
+class CounterClass {
+    var value: Int
+
+    init(value: Int) {
+        self.value = value
+    }
+}
+
+var structA = CounterStruct(value: 10)
+var structB = structA
+
+structB.value = 20
+
+print(structA.value)
+print(structB.value)
+```
+
+Output:
+
+```text
+10
+20
+```
+
+Class:
+
+```swift
+let classA = CounterClass(value: 10)
+let classB = classA
+
+classB.value = 20
+
+print(classA.value)
+print(classB.value)
+```
+
+Output:
+
+```text
+20
+20
+```
+
+---
+
+# 34. Inheritance
+
+Classes can inherit from other classes.
+
+```swift
+class Animal {
+    func speak() {
+        print("Animal sound")
+    }
+}
+
+class Dog: Animal {
+    override func speak() {
+        print("Woof!")
+    }
+}
+
+let dog = Dog()
+
+dog.speak()
+```
+
+---
+
+# 35. Protocols
+
+Protocol defines requirements.
+
+```swift
+protocol Vehicle {
+    var brand: String { get }
+
+    func drive()
+}
+
+struct Car: Vehicle {
+    let brand: String
+
+    func drive() {
+        print("\(brand) is driving")
+    }
+}
+
+let car = Car(brand: "Toyota")
+
+car.drive()
 ```
 
 ### ខ្មែរ
 
-Enum ប្រើសម្រាប់កំណត់ finite set នៃ values ឬ states។
+Protocol គឺជា contract។
+
+វាកំណត់ថា type មួយត្រូវមាន properties ឬ methods អ្វីខ្លះ។
 
 ---
 
-# 32. Error Handling
+# 36. Extensions
 
-Swift uses `throw`, `throws`, `do`, `try`, and `catch`.
+Extensions add functionality to existing types.
+
+```swift
+extension String {
+    var isLong: Bool {
+        count > 10
+    }
+}
+
+let text = "Hello Swift Programming"
+
+print(text.isLong)
+```
+
+Another example:
+
+```swift
+extension Int {
+    var squared: Int {
+        self * self
+    }
+}
+
+print(5.squared)
+```
+
+---
+
+# 37. Closures
+
+Closure is an anonymous function.
+
+```swift
+let greet = {
+    print("Hello Swift")
+}
+
+greet()
+```
+
+Closure with parameter:
+
+```swift
+let greet = { (name: String) in
+    print("Hello \(name)")
+}
+
+greet("Dara")
+```
+
+Closure with return value:
+
+```swift
+let add = { (a: Int, b: Int) -> Int in
+    a + b
+}
+
+print(add(10, 20))
+```
+
+---
+
+# 38. Higher-Order Functions
+
+Swift collections support powerful functional programming methods.
+
+Common methods:
+
+```text
+map
+filter
+reduce
+sorted
+compactMap
+flatMap
+forEach
+```
+
+---
+
+# 39. Map
+
+`map` transforms every element.
+
+```swift
+let numbers = [1, 2, 3, 4, 5]
+
+let doubled = numbers.map {
+    $0 * 2
+}
+
+print(doubled)
+```
+
+Output:
+
+```text
+[2, 4, 6, 8, 10]
+```
+
+---
+
+# 40. Filter
+
+`filter` keeps elements matching a condition.
+
+```swift
+let numbers = [1, 2, 3, 4, 5, 6]
+
+let evenNumbers = numbers.filter {
+    $0 % 2 == 0
+}
+
+print(evenNumbers)
+```
+
+Output:
+
+```text
+[2, 4, 6]
+```
+
+---
+
+# 41. Reduce
+
+`reduce` combines values into one result.
+
+```swift
+let numbers = [1, 2, 3, 4, 5]
+
+let total = numbers.reduce(0) {
+    $0 + $1
+}
+
+print(total)
+```
+
+Output:
+
+```text
+15
+```
+
+Short form:
+
+```swift
+let total = numbers.reduce(0, +)
+
+print(total)
+```
+
+---
+
+# 42. Error Handling
+
+Define an error:
 
 ```swift
 enum LoginError: Error {
-    case emptyUsername
+    case invalidUsername
     case invalidPassword
 }
+```
 
-func login(username: String, password: String) throws -> String {
+Throw an error:
 
-    if username.isEmpty {
-        throw LoginError.emptyUsername
+```swift
+func login(
+    username: String,
+    password: String
+) throws {
+    guard username == "admin" else {
+        throw LoginError.invalidUsername
     }
 
-    if password.count < 6 {
+    guard password == "1234" else {
         throw LoginError.invalidPassword
     }
 
-    return "Login successful"
+    print("Login successful")
 }
+```
 
+Handle the error:
+
+```swift
 do {
-    let message = try login(
-        username: "heng",
-        password: "123456"
+    try login(
+        username: "admin",
+        password: "1234"
     )
-
-    print(message)
-
-} catch LoginError.emptyUsername {
-    print("Username is empty")
-
+} catch LoginError.invalidUsername {
+    print("Invalid username")
 } catch LoginError.invalidPassword {
-    print("Password is invalid")
-
+    print("Invalid password")
 } catch {
     print("Unknown error")
 }
 ```
 
-### ខ្មែរ
-
-Error handling ជួយឱ្យ application ដោះស្រាយ errors ដោយមានសុវត្ថិភាព។
-
 ---
 
-# 33. Generics
+# 43. Generics
 
 Generics allow reusable code for different types.
 
 ```swift
-func swapValues<T>(_ a: inout T, _ b: inout T) {
+func swapValues<T>(
+    _ a: inout T,
+    _ b: inout T
+) {
     let temp = a
     a = b
     b = temp
 }
 
-var x = 10
-var y = 20
+var first = 10
+var second = 20
 
-swapValues(&x, &y)
+swapValues(&first, &second)
 
-print(x)
-print(y)
+print(first)
+print(second)
 ```
 
-The same function works with strings:
+The same function works with Strings:
 
 ```swift
 var first = "Hello"
@@ -1351,65 +1502,208 @@ print(first)
 print(second)
 ```
 
-## Generic Type
-
-```swift
-struct Box<T> {
-    let value: T
-}
-
-let intBox = Box(value: 100)
-let stringBox = Box(value: "Hello")
-
-print(intBox.value)
-print(stringBox.value)
-```
-
 ### ខ្មែរ
 
-Generics អនុញ្ញាតឱ្យយើងសរសេរ code ដែលអាចប្រើជាមួយ data types ផ្សេងៗបាន។
+Generic អនុញ្ញាតឱ្យ function ឬ type មួយអាចធ្វើការជាមួយ data type ជាច្រើន។
 
 ---
 
-# 34. Access Control
+# 44. Type Casting
 
 Swift provides:
 
-* `open`
-* `public`
-* `internal`
-* `fileprivate`
-* `private`
+```text
+is
+as
+as?
+as!
+```
+
+Example:
+
+```swift
+class Animal {}
+
+class Dog: Animal {
+    func bark() {
+        print("Woof!")
+    }
+}
+
+let animal: Animal = Dog()
+
+if animal is Dog {
+    print("This is a dog")
+}
+```
+
+Using `as?`:
+
+```swift
+if let dog = animal as? Dog {
+    dog.bark()
+}
+```
+
+### Important
+
+Prefer safe casting:
+
+```swift
+as?
+```
+
+Avoid forced casting unless you are certain:
+
+```swift
+as!
+```
+
+---
+
+# 45. Access Control
+
+Swift provides access levels such as:
+
+```text
+open
+public
+package
+internal
+fileprivate
+private
+```
 
 Example:
 
 ```swift
 public struct User {
-
     public let name: String
 
-    private var password: String
-
-    public init(name: String, password: String) {
+    public init(name: String) {
         self.name = name
-        self.password = password
-    }
-
-    public func login(password: String) -> Bool {
-        return self.password == password
     }
 }
 ```
 
-### ខ្មែរ
+Private example:
 
-Access control ប្រើសម្រាប់គ្រប់គ្រងថា property ឬ method អាចត្រូវបានប្រើពីទីណាខ្លះ។
+```swift
+struct BankAccount {
+    private var balance: Double = 0
+
+    mutating func deposit(_ amount: Double) {
+        balance += amount
+    }
+
+    func getBalance() -> Double {
+        balance
+    }
+}
+```
 
 ---
 
-# 35. Codable
+# 46. Static Members
 
-`Codable` makes encoding and decoding data easier.
+`static` creates type-level members.
+
+```swift
+struct AppConfig {
+    static let appName = "MyApp"
+    static let version = "1.0.0"
+}
+
+print(AppConfig.appName)
+print(AppConfig.version)
+```
+
+---
+
+# 47. Property Wrappers
+
+Property wrappers allow reusable property behavior.
+
+```swift
+@propertyWrapper
+struct Clamped {
+    private var value: Int
+
+    let range: ClosedRange<Int>
+
+    init(
+        wrappedValue: Int,
+        _ range: ClosedRange<Int>
+    ) {
+        self.range = range
+        self.value = min(
+            max(wrappedValue, range.lowerBound),
+            range.upperBound
+        )
+    }
+
+    var wrappedValue: Int {
+        get {
+            value
+        }
+        set {
+            value = min(
+                max(newValue, range.lowerBound),
+                range.upperBound
+            )
+        }
+    }
+}
+
+struct Player {
+    @Clamped(0...100)
+    var health = 100
+}
+
+var player = Player()
+
+player.health = 150
+
+print(player.health)
+```
+
+Output:
+
+```text
+100
+```
+
+---
+
+# 48. Result
+
+`Result` represents either success or failure.
+
+```swift
+enum APIError: Error {
+    case serverError
+}
+
+func fetchData() -> Result<String, APIError> {
+    .success("Hello from API")
+}
+
+let result = fetchData()
+
+switch result {
+case .success(let data):
+    print(data)
+
+case .failure(let error):
+    print(error)
+}
+```
+
+---
+
+# 49. Codable
+
+`Codable` is commonly used to encode/decode data.
 
 ```swift
 struct User: Codable {
@@ -1419,13 +1713,31 @@ struct User: Codable {
 }
 ```
 
+---
+
+# 50. JSON Encoding and Decoding
+
+Import Foundation:
+
+```swift
+import Foundation
+```
+
 Encode:
 
 ```swift
+import Foundation
+
+struct User: Codable {
+    let id: Int
+    let name: String
+    let email: String
+}
+
 let user = User(
     id: 1,
-    name: "Heng",
-    email: "heng@example.com"
+    name: "Dara",
+    email: "dara@example.com"
 )
 
 let encoder = JSONEncoder()
@@ -1442,64 +1754,13 @@ do {
 Decode:
 
 ```swift
-let json = """
-{
-    "id": 1,
-    "name": "Heng",
-    "email": "heng@example.com"
-}
-""".data(using: .utf8)!
-
-let decoder = JSONDecoder()
-
-do {
-    let user = try decoder.decode(User.self, from: json)
-
-    print(user.name)
-    print(user.email)
-} catch {
-    print(error)
-}
-```
-
-### ខ្មែរ
-
-`Codable` ជួយ convert Swift objects ទៅ JSON និង JSON ទៅ Swift objects។
-
----
-
-# 36. JSON
-
-Example API JSON:
-
-```json
-{
-    "id": 1,
-    "name": "Heng",
-    "email": "heng@example.com"
-}
-```
-
-Swift model:
-
-```swift
-struct User: Codable {
-    let id: Int
-    let name: String
-    let email: String
-}
-```
-
-Decode:
-
-```swift
 import Foundation
 
 let json = """
 {
     "id": 1,
-    "name": "Heng",
-    "email": "heng@example.com"
+    "name": "Dara",
+    "email": "dara@example.com"
 }
 """.data(using: .utf8)!
 
@@ -1510,233 +1771,276 @@ do {
     )
 
     print(user.name)
-
+    print(user.email)
 } catch {
-    print("Decoding failed:", error)
+    print(error)
 }
 ```
 
 ---
 
-# 37. Async/Await
+# 51. Foundation
+
+Foundation provides commonly used APIs.
+
+```swift
+import Foundation
+```
+
+Examples include:
+
+* Date
+* Calendar
+* URL
+* URLRequest
+* JSONDecoder
+* JSONEncoder
+* FileManager
+* UUID
+* Data
+
+Example:
+
+```swift
+import Foundation
+
+let id = UUID()
+
+print(id)
+```
+
+---
+
+# 52. Date and Time
+
+```swift
+import Foundation
+
+let now = Date()
+
+print(now)
+```
+
+Formatting:
+
+```swift
+import Foundation
+
+let formatter = DateFormatter()
+
+formatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+
+let now = Date()
+
+print(formatter.string(from: now))
+```
+
+---
+
+# 53. File Handling
+
+```swift
+import Foundation
+
+let fileURL = FileManager.default
+    .temporaryDirectory
+    .appendingPathComponent("hello.txt")
+
+let text = "Hello Swift!"
+
+do {
+    try text.write(
+        to: fileURL,
+        atomically: true,
+        encoding: .utf8
+    )
+
+    let content = try String(
+        contentsOf: fileURL,
+        encoding: .utf8
+    )
+
+    print(content)
+} catch {
+    print("File error:", error)
+}
+```
+
+---
+
+# 54. Async/Await
 
 Swift supports structured concurrency.
 
 ```swift
-import Foundation
-
-func fetchUser() async -> String {
-    try? await Task.sleep(for: .seconds(1))
-
-    return "Heng"
+func fetchUsername() async -> String {
+    "Dara"
 }
 
-Task {
-    let user = await fetchUser()
+func run() async {
+    let username = await fetchUsername()
 
-    print("User:", user)
+    print(username)
 }
 ```
 
-### Async throwing function
+Run with a Task:
+
+```swift
+Task {
+    let username = await fetchUsername()
+
+    print(username)
+}
+```
+
+### ខ្មែរ
+
+`async/await` ជួយសរសេរ asynchronous code ឱ្យអានងាយជាង callback-heavy code។
+
+---
+
+# 55. Tasks
 
 ```swift
 import Foundation
 
-enum NetworkError: Error {
-    case failed
-}
-
-func fetchData() async throws -> String {
-    try await Task.sleep(for: .seconds(1))
+func fetchData() async -> String {
+    try? await Task.sleep(for: .seconds(1))
 
     return "Data loaded"
 }
 
 Task {
-    do {
-        let data = try await fetchData()
+    let data = await fetchData()
 
-        print(data)
-
-    } catch {
-        print("Error:", error)
-    }
+    print(data)
 }
 ```
 
-### ខ្មែរ
-
-`async/await` ប្រើសម្រាប់ធ្វើ asynchronous operations ដូចជា API requests, database operations និង file operations ដោយមិន block main thread។
-
 ---
 
-# 38. Actors
+# 56. Actors
 
-Actors protect mutable state from data races.
+Actors protect mutable state from unsafe concurrent access.
 
 ```swift
-actor BankAccount {
-    private var balance: Int = 0
+actor Counter {
+    private var value = 0
 
-    func deposit(_ amount: Int) {
-        balance += amount
+    func increment() {
+        value += 1
     }
 
-    func getBalance() -> Int {
-        return balance
+    func getValue() -> Int {
+        value
     }
 }
 
-let account = BankAccount()
+let counter = Counter()
 
 Task {
-    await account.deposit(100)
-    let balance = await account.getBalance()
+    await counter.increment()
+    await counter.increment()
 
-    print("Balance:", balance)
+    let value = await counter.getValue()
+
+    print(value)
 }
 ```
 
 ### ខ្មែរ
 
-`actor` គឺជា reference type ដែល Swift ប្រើដើម្បីការពារ shared mutable state ក្នុង concurrent code។
+`actor` ជួយការពារ shared mutable state នៅពេលមាន concurrent code។
 
 ---
 
-# 39. Concurrency
+# 57. MainActor
 
-Multiple tasks can run concurrently.
+`@MainActor` is commonly used for code that must interact with main-thread-isolated state, especially UI-related state.
 
 ```swift
 import Foundation
 
-func download(name: String, seconds: UInt64) async {
-    try? await Task.sleep(for: .seconds(seconds))
+@MainActor
+final class UserViewModel {
+    var username = ""
 
-    print("\(name) completed")
+    func updateUsername() {
+        username = "Dara"
+    }
 }
 
-Task {
-    async let first = download(
-        name: "File 1",
-        seconds: 2
-    )
+Task { @MainActor in
+    let viewModel = UserViewModel()
 
-    async let second = download(
-        name: "File 2",
-        seconds: 1
-    )
+    viewModel.updateUsername()
 
-    _ = await (first, second)
-
-    print("All downloads completed")
+    print(viewModel.username)
 }
 ```
 
-### ខ្មែរ
-
-Concurrency អនុញ្ញាតឱ្យកម្មវិធីធ្វើ operations ជាច្រើនក្នុងពេលតែមួយតាមរបៀបដែលមានសុវត្ថិភាព។
+Swift 6.2 also introduced improvements around approachable concurrency and main-actor isolation.
 
 ---
 
-# 40. Property Wrappers
+# 58. Sendable
 
-Property wrappers allow reusable property behavior.
+`Sendable` indicates that a value can safely be transferred across concurrency domains.
+
+Example:
 
 ```swift
-@propertyWrapper
-struct Clamped {
-    private var value: Int
-    private let range: ClosedRange<Int>
+struct User: Sendable {
+    let id: Int
+    let name: String
+}
+```
 
-    init(wrappedValue: Int, _ range: ClosedRange<Int>) {
-        self.range = range
-        self.value = range.clamp(wrappedValue)
+This is especially important when writing modern concurrent Swift code.
+
+---
+
+# 59. Memory Management
+
+Swift uses Automatic Reference Counting (ARC) for class instances.
+
+Example:
+
+```swift
+class User {
+    let name: String
+
+    init(name: String) {
+        self.name = name
+
+        print("\(name) initialized")
     }
 
-    var wrappedValue: Int {
-        get {
-            value
-        }
-
-        set {
-            value = range.clamp(newValue)
-        }
+    deinit {
+        print("\(name) deinitialized")
     }
 }
 
-extension ClosedRange where Bound == Int {
-    func clamp(_ value: Int) -> Int {
-        min(max(value, lowerBound), upperBound)
-    }
-}
+var user: User? = User(name: "Dara")
 
-struct User {
-    @Clamped(0...100)
-    var score: Int = 0
-}
-
-var user = User()
-
-user.score = 150
-
-print(user.score)
+user = nil
 ```
 
 Output:
 
 ```text
-100
+Dara initialized
+Dara deinitialized
 ```
-
-### ខ្មែរ
-
-Property Wrapper អនុញ្ញាតឱ្យយើងបង្កើត reusable logic សម្រាប់ properties។
 
 ---
 
-# 41. Result Type
+# 60. Weak and Unowned
 
-`Result` represents success or failure.
+## Weak
 
-```swift
-enum AppError: Error {
-    case invalidInput
-}
-
-func divide(
-    _ a: Double,
-    by b: Double
-) -> Result<Double, Error> {
-
-    guard b != 0 else {
-        return .failure(AppError.invalidInput)
-    }
-
-    return .success(a / b)
-}
-
-let result = divide(10, by: 2)
-
-switch result {
-case .success(let value):
-    print("Result:", value)
-
-case .failure(let error):
-    print("Error:", error)
-}
-```
-
-### ខ្មែរ
-
-`Result<Success, Failure>` មានប្រយោជន៍សម្រាប់ API និង service layers ដែលត្រូវ return success ឬ error។
-
----
-
-# 42. Memory Management
-
-Swift uses Automatic Reference Counting (ARC).
+Weak references do not keep an object alive.
 
 ```swift
 class Person {
@@ -1744,194 +2048,272 @@ class Person {
 
     init(name: String) {
         self.name = name
-
-        print("\(name) created")
     }
 
     deinit {
-        print("\(name) destroyed")
+        print("\(name) deinitialized")
     }
 }
 
-var person: Person? = Person(name: "Heng")
+class Apartment {
+    let number: Int
+    weak var tenant: Person?
+
+    init(number: Int) {
+        self.number = number
+    }
+}
+
+var person: Person? = Person(name: "Dara")
+
+let apartment = Apartment(number: 101)
+
+apartment.tenant = person
 
 person = nil
 ```
 
-When the last strong reference disappears, the object is deallocated.
+## Unowned
 
-### ខ្មែរ
-
-Swift ប្រើ **ARC (Automatic Reference Counting)** ដើម្បីគ្រប់គ្រង memory សម្រាប់ reference types។
-
----
-
-# 43. Weak and Unowned
-
-## Weak
-
-Use `weak` when a reference should not keep an object alive.
+Use `unowned` when the referenced object is expected to outlive the reference.
 
 ```swift
-class Owner {
+class Customer {
     let name: String
-    var pet: Pet?
+    var card: CreditCard?
 
     init(name: String) {
         self.name = name
     }
 }
 
-class Pet {
-    let name: String
-    weak var owner: Owner?
+class CreditCard {
+    let number: String
+    unowned let customer: Customer
 
-    init(name: String) {
-        self.name = name
+    init(number: String, customer: Customer) {
+        self.number = number
+        self.customer = customer
     }
 }
-
-var owner: Owner? = Owner(name: "Heng")
-var pet: Pet? = Pet(name: "Buddy")
-
-owner?.pet = pet
-pet?.owner = owner
-
-owner = nil
-pet = nil
 ```
 
-### ខ្មែរ
-
-`weak` ជួយការពារ retain cycle និងត្រូវបានប្រើជាញឹកញាប់ក្នុង delegate relationships និង object graphs។
+Be careful with `unowned`: accessing an unowned reference after its object has been deallocated causes a runtime failure.
 
 ---
 
-# 44. Dependency Injection
+# 61. Protocol-Oriented Programming
 
-Dependency Injection makes code easier to test and maintain.
+Swift strongly supports protocol-oriented design.
 
 ```swift
-protocol UserService {
-    func getUser() -> String
+protocol Printable {
+    func printInfo()
 }
 
-struct RealUserService: UserService {
-    func getUser() -> String {
-        return "Heng"
+struct User: Printable {
+    let name: String
+
+    func printInfo() {
+        print("User: \(name)")
     }
 }
 
-struct MockUserService: UserService {
-    func getUser() -> String {
-        return "Test User"
+struct Product: Printable {
+    let name: String
+
+    func printInfo() {
+        print("Product: \(name)")
     }
 }
 
-class UserViewModel {
-    private let service: UserService
+let user = User(name: "Dara")
+let product = Product(name: "MacBook")
 
-    init(service: UserService) {
-        self.service = service
-    }
+user.printInfo()
+product.printInfo()
+```
 
-    func loadUser() {
-        print(service.getUser())
+---
+
+# 62. Dependency Injection
+
+Dependency Injection means providing dependencies from outside instead of creating them internally.
+
+```swift
+protocol Logger {
+    func log(_ message: String)
+}
+
+struct ConsoleLogger: Logger {
+    func log(_ message: String) {
+        print(message)
     }
 }
 
-let production = UserViewModel(
-    service: RealUserService()
+final class UserService {
+    private let logger: Logger
+
+    init(logger: Logger) {
+        self.logger = logger
+    }
+
+    func createUser() {
+        logger.log("User created")
+    }
+}
+
+let logger = ConsoleLogger()
+
+let service = UserService(
+    logger: logger
 )
 
-production.loadUser()
-
-let testing = UserViewModel(
-    service: MockUserService()
-)
-
-testing.loadUser()
+service.createUser()
 ```
 
 ### ខ្មែរ
 
 Dependency Injection ធ្វើឱ្យ code:
 
-* ងាយ test
-* ងាយ maintain
-* ងាយ replace implementation
-* កាត់បន្ថយ coupling
+* Test ងាយ
+* Maintain ងាយ
+* Replace implementation ងាយ
+* Coupling តិច
 
 ---
 
-# 45. MVVM
+# 63. Generics + Protocols
 
-MVVM means:
+Advanced Swift often combines protocols and generics.
+
+```swift
+protocol IdentifiableItem {
+    associatedtype ID: Hashable
+
+    var id: ID { get }
+}
+
+struct User: IdentifiableItem {
+    let id: Int
+    let name: String
+}
+
+func printID<T: IdentifiableItem>(
+    _ item: T
+) {
+    print(item.id)
+}
+
+let user = User(
+    id: 100,
+    name: "Dara"
+)
+
+printID(user)
+```
+
+---
+
+# 64. Swift Package Manager
+
+Swift Package Manager is the standard package-management system for Swift.
+
+Create a package:
+
+```bash
+mkdir MyPackage
+cd MyPackage
+
+swift package init --type executable
+```
+
+Build:
+
+```bash
+swift build
+```
+
+Run:
+
+```bash
+swift run
+```
+
+Test:
+
+```bash
+swift test
+```
+
+Release build:
+
+```bash
+swift build -c release
+```
+
+A typical package structure:
 
 ```text
-Model
-View
-ViewModel
+MyPackage/
+├── Package.swift
+├── Sources/
+│   └── MyPackage/
+│       └── main.swift
+└── Tests/
+    └── MyPackageTests/
+        └── MyPackageTests.swift
 ```
+
+---
+
+# 65. Testing
+
+Modern Swift supports the Swift Testing framework.
 
 Example:
 
 ```swift
-import Foundation
+import Testing
 
-struct User {
-    let name: String
-}
+struct CalculatorTests {
 
-protocol UserService {
-    func fetchUser() async -> User
-}
+    @Test
+    func addition() {
+        let result = 10 + 20
 
-struct APIUserService: UserService {
-
-    func fetchUser() async -> User {
-        return User(name: "Heng")
-    }
-}
-
-@MainActor
-final class UserViewModel {
-
-    private let service: UserService
-
-    var username: String = ""
-
-    init(service: UserService) {
-        self.service = service
-    }
-
-    func loadUser() async {
-        let user = await service.fetchUser()
-
-        username = user.name
+        #expect(result == 30)
     }
 }
 ```
 
-### Architecture
+Another example:
 
-```text
-View
- ↓
-ViewModel
- ↓
-Service
- ↓
-API / Database
+```swift
+import Testing
+
+struct UserTests {
+
+    @Test
+    func userName() {
+        let user = User(
+            name: "Dara"
+        )
+
+        #expect(user.name == "Dara")
+    }
+}
 ```
 
-### ខ្មែរ
+Run tests:
 
-MVVM ជួយបែងចែក UI logic និង business logic ដើម្បីធ្វើឱ្យ project ងាយ maintain។
+```bash
+swift test
+```
 
 ---
 
-# 46. SwiftUI
+# 66. SwiftUI Introduction
 
 SwiftUI is Apple's declarative UI framework.
 
@@ -1941,496 +2323,194 @@ Basic example:
 import SwiftUI
 
 struct ContentView: View {
-
     var body: some View {
         Text("Hello SwiftUI")
             .font(.largeTitle)
             .padding()
     }
 }
+
+#Preview {
+    ContentView()
+}
 ```
 
-## Button
+Button:
 
 ```swift
 import SwiftUI
 
 struct ContentView: View {
-
     @State private var count = 0
 
     var body: some View {
         VStack(spacing: 20) {
-
             Text("Count: \(count)")
-                .font(.largeTitle)
 
-            Button("Increase") {
+            Button("Increment") {
                 count += 1
             }
         }
         .padding()
     }
 }
-```
 
-### ខ្មែរ
-
-SwiftUI ប្រើ declarative syntax។
-
-យើងប្រាប់ SwiftUI ថា UI គួរមានអ្វី ហើយ framework គ្រប់គ្រងការប更新 UI។
-
----
-
-# 47. SwiftUI State
-
-Common property wrappers:
-
-```text
-@State
-@Binding
-@ObservedObject
-@StateObject
-@EnvironmentObject
-@Environment
-```
-
-Example:
-
-```swift
-import SwiftUI
-
-struct CounterView: View {
-
-    @State private var count = 0
-
-    var body: some View {
-
-        VStack {
-
-            Text("\(count)")
-                .font(.largeTitle)
-
-            Button("Add") {
-                count += 1
-            }
-        }
-        .padding()
-    }
+#Preview {
+    ContentView()
 }
 ```
 
 ### ខ្មែរ
 
-`@State` ប្រើសម្រាប់ local UI state ដែល SwiftUI គ្រប់គ្រង។
+SwiftUI ប្រើ declarative programming។
+
+អ្នកប្រាប់ថា UI គួរមានរូបរាងដូចម្តេច ហើយ SwiftUI គ្រប់គ្រង UI update តាម state។
 
 ---
 
-# 48. Testing
+# 67. MVVM
 
-Swift supports unit testing with XCTest.
+MVVM means:
 
-Example:
+```text
+Model
+View
+ViewModel
+```
+
+## Model
 
 ```swift
-import XCTest
-
-final class CalculatorTests: XCTestCase {
-
-    func testAddition() {
-
-        let result = 10 + 20
-
-        XCTAssertEqual(result, 30)
-    }
-
-    func testSubtraction() {
-
-        let result = 20 - 10
-
-        XCTAssertEqual(result, 10)
-    }
+struct User {
+    let name: String
+    let email: String
 }
 ```
 
-### ខ្មែរ
-
-Testing ជួយធានាថា code របស់យើងធ្វើការត្រឹមត្រូវ និងការពារ regression។
-
----
-
-# 49. Advanced Project Structure
-
-A scalable Swift project can use:
-
-```text
-MyApp/
-├── App/
-│   └── MyApp.swift
-│
-├── Core/
-│   ├── Network/
-│   ├── Database/
-│   ├── Extensions/
-│   └── Utilities/
-│
-├── Models/
-│   ├── User.swift
-│   └── Product.swift
-│
-├── Services/
-│   ├── UserService.swift
-│   └── ProductService.swift
-│
-├── ViewModels/
-│   ├── UserViewModel.swift
-│   └── ProductViewModel.swift
-│
-├── Views/
-│   ├── HomeView.swift
-│   ├── LoginView.swift
-│   └── ProfileView.swift
-│
-└── Tests/
-    └── MyAppTests/
-```
-
-### ខ្មែរ
-
-ការរៀបចំ project ឱ្យបានល្អធ្វើឱ្យ codebase ធំៗងាយស្រួល maintain។
-
----
-
-# 50. Networking
-
-A simple HTTP GET request:
+## ViewModel
 
 ```swift
 import Foundation
 
-struct User: Codable {
-    let id: Int
-    let name: String
-    let email: String
+@Observable
+final class UserViewModel {
+    var user: User?
+
+    func loadUser() {
+        user = User(
+            name: "Dara",
+            email: "dara@example.com"
+        )
+    }
 }
+```
 
-func fetchUsers() async throws -> [User] {
+## View
 
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    @State private var viewModel = UserViewModel()
+
+    var body: some View {
+        VStack {
+            if let user = viewModel.user {
+                Text(user.name)
+                Text(user.email)
+            } else {
+                Text("No user")
+            }
+
+            Button("Load User") {
+                viewModel.loadUser()
+            }
+        }
+        .padding()
+    }
+}
+```
+
+> `@Observable` requires the Observation framework in environments where it is used.
+
+---
+
+# 68. Networking
+
+Use `URLSession` for HTTP networking.
+
+```swift
+import Foundation
+
+func fetchData() async throws -> Data {
     let url = URL(
-        string: "https://example.com/api/users"
+        string: "https://example.com"
     )!
 
-    let (data, response) = try await URLSession.shared.data(
+    let (data, _) = try await URLSession.shared.data(
         from: url
     )
 
-    guard let httpResponse = response as? HTTPURLResponse,
-          200..<300 ~= httpResponse.statusCode else {
-        throw URLError(.badServerResponse)
-    }
-
-    return try JSONDecoder().decode(
-        [User].self,
-        from: data
-    )
+    return data
 }
+```
 
+Call it:
+
+```swift
 Task {
     do {
-        let users = try await fetchUsers()
+        let data = try await fetchData()
 
-        for user in users {
-            print(user.name)
-        }
-
+        print("Received \(data.count) bytes")
     } catch {
         print("Request failed:", error)
     }
 }
 ```
 
-> Replace `https://example.com/api/users` with your real API endpoint.
-
-### ខ្មែរ
-
-`URLSession` ប្រើសម្រាប់ HTTP networking។
-
-Flow:
-
-```text
-URL
- ↓
-URLSession
- ↓
-HTTP Response
- ↓
-Data
- ↓
-JSONDecoder
- ↓
-Swift Model
-```
-
 ---
 
-# 51. Advanced Generics with Protocols
+# 69. REST API
+
+Suppose an API returns:
+
+```json
+{
+    "id": 1,
+    "name": "Dara",
+    "email": "dara@example.com"
+}
+```
+
+Model:
 
 ```swift
-protocol IdentifiableEntity {
-    associatedtype ID: Hashable
-
-    var id: ID { get }
-}
-
-struct Product: IdentifiableEntity {
+struct User: Codable {
     let id: Int
     let name: String
-}
-
-func findByID<T: IdentifiableEntity>(
-    _ items: [T],
-    id: T.ID
-) -> T? {
-
-    items.first {
-        $0.id == id
-    }
-}
-
-let products = [
-    Product(id: 1, name: "Laptop"),
-    Product(id: 2, name: "Phone")
-]
-
-if let product = findByID(products, id: 2) {
-    print(product.name)
+    let email: String
 }
 ```
 
-### ខ្មែរ
-
-Advanced generics អាចប្រើ `associatedtype` និង protocol constraints ដើម្បីបង្កើត highly reusable code។
-
----
-
-# 52. Protocol-Oriented Programming
-
-Swift strongly supports protocol-oriented programming.
-
-```swift
-protocol Printable {
-    func printInfo()
-}
-
-extension Printable {
-    func printInfo() {
-        print("Default information")
-    }
-}
-
-struct User: Printable {
-    let name: String
-
-    func printInfo() {
-        print("User:", name)
-    }
-}
-
-struct Product: Printable {
-    let name: String
-}
-
-let user = User(name: "Heng")
-let product = Product(name: "Laptop")
-
-user.printInfo()
-product.printInfo()
-```
-
-### ខ្មែរ
-
-Protocol-oriented programming ជួយឱ្យ code មានភាព flexible និង reusable ដោយផ្អែកលើ behavior ជាង inheritance។
-
----
-
-# 53. Sendable and Concurrency Safety
-
-For concurrent code, Swift provides `Sendable`.
-
-```swift
-struct User: Sendable {
-    let id: Int
-    let name: String
-}
-
-actor UserStore {
-
-    private var users: [User] = []
-
-    func add(_ user: User) {
-        users.append(user)
-    }
-
-    func allUsers() -> [User] {
-        users
-    }
-}
-
-let store = UserStore()
-
-Task {
-    await store.add(
-        User(id: 1, name: "Heng")
-    )
-
-    let users = await store.allUsers()
-
-    print(users)
-}
-```
-
-### ខ្មែរ
-
-`Sendable` ជួយបញ្ជាក់ថា value មួយអាចផ្ទេររវាង concurrency domains ដោយសុវត្ថិភាព។
-
----
-
-# 54. Key Paths
-
-Swift supports key paths for dynamic property access.
-
-```swift
-struct User {
-    let name: String
-    let age: Int
-}
-
-let user = User(
-    name: "Heng",
-    age: 20
-)
-
-let nameKeyPath = \User.name
-
-let name = user[keyPath: nameKeyPath]
-
-print(name)
-```
-
-### ខ្មែរ
-
-Key Path អនុញ្ញាតឱ្យយើង reference ទៅ property ដោយមិន access ដោយផ្ទាល់។
-
----
-
-# 55. Custom Operators
-
-Swift allows custom operators.
-
-```swift
-struct Vector {
-    let x: Int
-    let y: Int
-}
-
-func + (
-    lhs: Vector,
-    rhs: Vector
-) -> Vector {
-
-    Vector(
-        x: lhs.x + rhs.x,
-        y: lhs.y + rhs.y
-    )
-}
-
-let first = Vector(x: 1, y: 2)
-let second = Vector(x: 3, y: 4)
-
-let result = first + second
-
-print(result.x)
-print(result.y)
-```
-
-### ខ្មែរ
-
-Custom operators អាចធ្វើឱ្យ domain-specific code មានភាពងាយអាន ប៉ុន្តែគួរប្រើដោយប្រុងប្រយ័ត្ន។
-
----
-
-# 56. Result Builder Concept
-
-SwiftUI relies heavily on result-builder syntax.
-
-A simplified custom example:
-
-```swift
-@resultBuilder
-struct StringBuilder {
-
-    static func buildBlock(
-        _ components: String...
-    ) -> String {
-        components.joined(separator: " ")
-    }
-}
-
-func createMessage(
-    @StringBuilder _ content: () -> String
-) -> String {
-    content()
-}
-
-let message = createMessage {
-    "Hello"
-    "Swift"
-    "Developer"
-}
-
-print(message)
-```
-
-Output:
-
-```text
-Hello Swift Developer
-```
-
-### ខ្មែរ
-
-Result Builder ជា Swift feature ដែលអនុញ្ញាតឱ្យបង្កើត declarative syntax ដូចដែលយើងឃើញនៅក្នុង SwiftUI។
-
----
-
-# 57. Actors + Networking Example
-
-A practical service architecture:
+API service:
 
 ```swift
 import Foundation
 
-struct User: Codable, Sendable {
-    let id: Int
-    let name: String
-}
-
-actor UserAPI {
-
-    private let session = URLSession.shared
+struct APIService {
 
     func fetchUser() async throws -> User {
-
         let url = URL(
             string: "https://example.com/api/user"
         )!
 
-        let (data, response) = try await session.data(
+        let (data, response) = try await URLSession.shared.data(
             from: url
         )
 
-        guard let response = response as? HTTPURLResponse,
-              200..<300 ~= response.statusCode else {
+        guard let httpResponse = response as? HTTPURLResponse,
+              200..<300 ~= httpResponse.statusCode else {
             throw URLError(.badServerResponse)
         }
 
@@ -2440,236 +2520,250 @@ actor UserAPI {
         )
     }
 }
+```
 
-let api = UserAPI()
+Usage:
+
+```swift
+let api = APIService()
 
 Task {
     do {
         let user = try await api.fetchUser()
 
         print(user.name)
-
     } catch {
-        print("Error:", error)
+        print(error)
     }
 }
 ```
 
 ---
 
-# 58. Complete Mini Project
+# 70. Advanced Swift Project
 
-Let's build a simple in-memory User Management application.
+Here is a small architecture combining:
+
+* Protocol
+* Dependency Injection
+* Codable
+* async/await
+* URLSession
+* Error handling
+* Actor
+* Generic networking concepts
+
+## Model
 
 ```swift
 import Foundation
 
-struct User: Identifiable, Codable {
-    let id: UUID
-    var name: String
-    var email: String
+struct User: Codable, Sendable {
+    let id: Int
+    let name: String
+    let email: String
 }
+```
 
-actor UserRepository {
+## API Error
 
-    private var users: [User] = []
+```swift
+enum APIError: Error {
+    case invalidURL
+    case invalidResponse
+    case serverError(Int)
+}
+```
 
-    func create(
-        name: String,
-        email: String
-    ) -> User {
+## API Client Protocol
 
-        let user = User(
-            id: UUID(),
-            name: name,
-            email: email
-        )
+```swift
+protocol APIClient {
+    func fetchUser() async throws -> User
+}
+```
 
-        users.append(user)
+## Network Client
 
-        return user
-    }
+```swift
+import Foundation
 
-    func getAll() -> [User] {
-        users
-    }
+struct NetworkClient: APIClient {
 
-    func delete(id: UUID) {
-        users.removeAll {
-            $0.id == id
+    let baseURL: URL
+
+    func fetchUser() async throws -> User {
+
+        let url = baseURL
+            .appendingPathComponent("user")
+
+        let (data, response) =
+            try await URLSession.shared.data(
+                from: url
+            )
+
+        guard let response =
+                response as? HTTPURLResponse else {
+            throw APIError.invalidResponse
         }
-    }
-}
 
-@main
-struct Main {
-
-    static func main() async {
-
-        let repository = UserRepository()
-
-        let user = await repository.create(
-            name: "Heng",
-            email: "heng@example.com"
-        )
-
-        print("Created:", user.name)
-
-        let users = await repository.getAll()
-
-        print("Users:")
-
-        for user in users {
-            print(
-                "\(user.name) - \(user.email)"
+        guard 200..<300 ~= response.statusCode else {
+            throw APIError.serverError(
+                response.statusCode
             )
         }
 
-        await repository.delete(
-            id: user.id
-        )
-
-        print(
-            "Remaining:",
-            await repository.getAll().count
-        )
+        return try JSONDecoder()
+            .decode(User.self, from: data)
     }
 }
 ```
 
-### Architecture
+## Repository
 
-```text
-             ┌──────────────┐
-             │     Main     │
-             └──────┬───────┘
-                    │
-                    ▼
-          ┌──────────────────┐
-          │ UserRepository   │
-          │      Actor       │
-          └────────┬─────────┘
-                   │
-                   ▼
-             ┌──────────┐
-             │   User   │
-             │  Model   │
-             └──────────┘
+```swift
+protocol UserRepository {
+    func getUser() async throws -> User
+}
+```
+
+Implementation:
+
+```swift
+struct DefaultUserRepository: UserRepository {
+
+    private let apiClient: APIClient
+
+    init(apiClient: APIClient) {
+        self.apiClient = apiClient
+    }
+
+    func getUser() async throws -> User {
+        try await apiClient.fetchUser()
+    }
+}
+```
+
+## ViewModel
+
+```swift
+import Foundation
+
+@MainActor
+final class UserViewModel {
+
+    private let repository: UserRepository
+
+    private(set) var user: User?
+
+    init(repository: UserRepository) {
+        self.repository = repository
+    }
+
+    func loadUser() async {
+
+        do {
+            user = try await repository.getUser()
+        } catch {
+            print("Failed:", error)
+        }
+    }
+}
+```
+
+## Usage
+
+```swift
+import Foundation
+
+let client = NetworkClient(
+    baseURL: URL(
+        string: "https://example.com/api"
+    )!
+)
+
+let repository = DefaultUserRepository(
+    apiClient: client
+)
+
+let viewModel = UserViewModel(
+    repository: repository
+)
+
+Task { @MainActor in
+    await viewModel.loadUser()
+
+    if let user = viewModel.user {
+        print(user.name)
+    }
+}
 ```
 
 ---
 
-# 59. Swift Package Manager
-
-Create a package:
-
-```bash
-mkdir MySwiftApp
-cd MySwiftApp
-
-swift package init --type executable
-```
-
-Run:
-
-```bash
-swift run
-```
-
-Build:
-
-```bash
-swift build
-```
-
-Test:
-
-```bash
-swift test
-```
-
-Release build:
-
-```bash
-swift build -c release
-```
-
-### Typical structure
-
-```text
-MySwiftApp/
-├── Package.swift
-├── Sources/
-│   └── MySwiftApp/
-│       └── main.swift
-└── Tests/
-    └── MySwiftAppTests/
-        └── MySwiftAppTests.swift
-```
-
----
-
-# 60. Swift Best Practices
+# 71. Best Practices
 
 ## 1. Prefer `let`
 
 Good:
 
 ```swift
-let name = "Heng"
+let name = "Dara"
 ```
 
-Only use `var` when mutation is required.
+Only use `var` when mutation is required:
 
 ```swift
 var count = 0
+
 count += 1
 ```
 
 ---
 
-## 2. Avoid Force Unwrapping
+## 2. Avoid force unwrap
 
 Avoid:
 
 ```swift
-let value = optionalValue!
+let name = optionalName!
 ```
 
 Prefer:
 
 ```swift
-if let value = optionalValue {
-    print(value)
+if let name = optionalName {
+    print(name)
 }
 ```
 
 or:
 
 ```swift
-let value = optionalValue ?? "Default"
+let name = optionalName ?? "Unknown"
 ```
 
 ---
 
-## 3. Use Guard for Early Validation
+## 3. Prefer guard for early validation
+
+Good:
 
 ```swift
-func process(username: String?) {
-
-    guard let username else {
+func process(user: User?) {
+    guard let user else {
         return
     }
 
-    print(username)
+    print(user.name)
 }
 ```
 
 ---
 
-## 4. Keep Functions Small
+## 4. Keep functions small
 
-Instead of:
+Bad:
 
 ```swift
 func doEverything() {
@@ -2677,618 +2771,669 @@ func doEverything() {
 }
 ```
 
-Prefer:
+Better:
 
 ```swift
-func validateUser() {
-}
+func validateUser() {}
 
-func saveUser() {
-}
+func saveUser() {}
 
-func sendNotification() {
-}
+func sendEmail() {}
 ```
 
 ---
 
-## 5. Prefer Protocols for Abstractions
-
-```swift
-protocol UserRepository {
-    func getUsers() async throws -> [User]
-}
-```
-
-This makes testing and dependency injection easier.
-
----
-
-## 6. Use Meaningful Names
+## 5. Use meaningful names
 
 Bad:
 
 ```swift
-let x = 20
+let x = 100
 ```
 
 Better:
 
 ```swift
-let userAge = 20
+let maximumRetries = 100
 ```
+
+Swift's API Design Guidelines emphasize clarity at the point of use and consistent naming.
 
 ---
 
-## 7. Avoid Massive ViewModels
+## 6. Prefer value types when appropriate
 
-Keep responsibilities separated:
+Use:
 
-```text
-View
- ↓
-ViewModel
- ↓
-UseCase
- ↓
-Repository
- ↓
-API / Database
+```swift
+struct
+enum
 ```
+
+when reference identity is not required.
+
+Use:
+
+```swift
+class
+```
+
+when you need:
+
+* Shared identity
+* Reference semantics
+* Inheritance
+* Lifecycle management
 
 ---
 
-# 61. Swift Learning Roadmap
+## 7. Use protocols for abstraction
 
-## 🟢 Beginner
-
-Learn:
-
-```text
-Swift Syntax
-    ↓
-Variables
-    ↓
-Constants
-    ↓
-Data Types
-    ↓
-Operators
-    ↓
-Strings
-    ↓
-Conditions
-    ↓
-Loops
-    ↓
-Arrays
-    ↓
-Sets
-    ↓
-Dictionaries
-    ↓
-Functions
+```swift
+protocol PaymentService {
+    func pay(amount: Double)
+}
 ```
+
+Then implementations can change without changing the caller.
 
 ---
 
-# 🟡 Intermediate
+## 8. Use dependency injection
 
-Learn:
+Prefer:
 
-```text
-Optionals
-    ↓
-Guard
-    ↓
-Closures
-    ↓
-map / filter / reduce
-    ↓
-Structs
-    ↓
-Classes
-    ↓
-Properties
-    ↓
-Methods
-    ↓
-Initializers
-    ↓
-Enums
-    ↓
-Protocols
-    ↓
-Extensions
-    ↓
-Error Handling
+```swift
+init(service: PaymentService)
 ```
+
+instead of:
+
+```swift
+init() {
+    service = PaymentServiceImplementation()
+}
+```
+
+Dependency injection makes testing and architecture easier.
 
 ---
 
-# 🔴 Advanced
+## 9. Prefer structured concurrency
 
-Learn:
+Modern Swift code should generally use:
 
-```text
-Generics
-    ↓
-Protocol-Oriented Programming
-    ↓
-Memory Management
-    ↓
-ARC
-    ↓
-Weak / Unowned
-    ↓
-Dependency Injection
-    ↓
-Codable
-    ↓
-Networking
-    ↓
-Async / Await
-    ↓
-Actors
-    ↓
-Concurrency
-    ↓
+```swift
+async
+await
+Task
+actor
 Sendable
-    ↓
-Property Wrappers
-    ↓
-Result Builders
-    ↓
-Swift Package Manager
-    ↓
-Testing
-    ↓
-Architecture
 ```
+
+rather than building new asynchronous code around callback pyramids.
+
+Swift 6.2 introduced further improvements aimed at making concurrency easier to adopt while retaining safety.
 
 ---
 
-# 62. iOS Development Roadmap
+# 72. Learning Roadmap
 
-After learning Swift:
+## 🟢 Level 1 — Beginner
+
+Learn:
 
 ```text
-Swift
-  ↓
-SwiftUI
-  ↓
-UIKit
-  ↓
-Foundation
-  ↓
-Networking
-  ↓
-JSON / Codable
-  ↓
-Persistence
-  ↓
-Concurrency
-  ↓
-Architecture
-  ↓
-Testing
-  ↓
-App Store Deployment
+1. Variables
+2. Constants
+3. Data Types
+4. Strings
+5. Numbers
+6. Boolean
+7. Operators
+8. if / else
+9. switch
+10. loops
+11. arrays
+12. sets
+13. dictionaries
+14. functions
+15. optionals
+```
+
+Practice project:
+
+### Calculator
+
+```swift
+func calculate(
+    _ a: Double,
+    _ b: Double,
+    operation: String
+) -> Double? {
+
+    switch operation {
+    case "+":
+        return a + b
+
+    case "-":
+        return a - b
+
+    case "*":
+        return a * b
+
+    case "/":
+        guard b != 0 else {
+            return nil
+        }
+
+        return a / b
+
+    default:
+        return nil
+    }
+}
+
+print(calculate(10, 5, operation: "+") ?? 0)
+print(calculate(10, 5, operation: "*") ?? 0)
 ```
 
 ---
 
-# 63. Recommended Architecture
+# 🟡 Level 2 — Intermediate
+
+Learn:
+
+```text
+1. Struct
+2. Class
+3. Enum
+4. Protocol
+5. Extension
+6. Closure
+7. map
+8. filter
+9. reduce
+10. Error Handling
+11. Generics
+12. Codable
+13. Foundation
+14. File Handling
+15. Networking
+```
+
+Practice project:
+
+### Todo Model
+
+```swift
+struct Todo: Codable, Identifiable {
+    let id: UUID
+    var title: String
+    var isCompleted: Bool
+}
+
+var todos = [
+    Todo(
+        id: UUID(),
+        title: "Learn Swift",
+        isCompleted: false
+    ),
+    Todo(
+        id: UUID(),
+        title: "Build an App",
+        isCompleted: false
+    )
+]
+
+todos[0].isCompleted = true
+
+let completed = todos.filter {
+    $0.isCompleted
+}
+
+for todo in completed {
+    print(todo.title)
+}
+```
+
+---
+
+# 🔴 Level 3 — Advanced
+
+Learn:
+
+```text
+1. Generics
+2. Associated Types
+3. Opaque Types
+4. Existentials
+5. Protocol Composition
+6. Property Wrappers
+7. Result
+8. ARC
+9. Weak
+10. Unowned
+11. async/await
+12. Task
+13. TaskGroup
+14. Actor
+15. MainActor
+16. Sendable
+17. Structured Concurrency
+18. Swift Package Manager
+19. Testing
+20. Macros
+21. SwiftUI architecture
+22. Dependency Injection
+23. Modular Architecture
+24. Performance
+```
+
+---
+
+# 🚀 Recommended Swift Project Structure
 
 For a larger application:
 
 ```text
-                    ┌───────────────┐
-                    │      View     │
-                    └───────┬───────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │   ViewModel   │
-                    └───────┬───────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │    UseCase    │
-                    └───────┬───────┘
-                            │
-                            ▼
-                    ┌───────────────┐
-                    │  Repository   │
-                    └───────┬───────┘
-                            │
-                 ┌──────────┴──────────┐
-                 ▼                     ▼
-          ┌────────────┐       ┌─────────────┐
-          │     API    │       │   Database  │
-          └────────────┘       └─────────────┘
-```
-
-### ខ្មែរ
-
-Architecture បែបនេះជួយបំបែក responsibility របស់ component នីមួយៗ។
-
----
-
-# 64. Common Swift Mistakes
-
-## Mistake 1 — Force unwrap
-
-```swift
-let name = optionalName!
-```
-
-Better:
-
-```swift
-guard let name = optionalName else {
-    return
-}
+MyApp/
+│
+├── App/
+│   ├── MyApp.swift
+│   └── AppEnvironment.swift
+│
+├── Core/
+│   ├── Networking/
+│   │   ├── APIClient.swift
+│   │   ├── NetworkError.swift
+│   │   └── Endpoint.swift
+│   │
+│   ├── Storage/
+│   │   └── StorageService.swift
+│   │
+│   └── Extensions/
+│
+├── Features/
+│   ├── Authentication/
+│   │   ├── Models/
+│   │   ├── Views/
+│   │   ├── ViewModels/
+│   │   └── Services/
+│   │
+│   ├── Home/
+│   │   ├── Models/
+│   │   ├── Views/
+│   │   └── ViewModels/
+│   │
+│   └── Profile/
+│
+├── Shared/
+│   ├── Components/
+│   ├── Models/
+│   └── Utilities/
+│
+└── Tests/
 ```
 
 ---
 
-## Mistake 2 — Using `var` everywhere
+# 🧠 Swift Concepts You Should Master
 
-Bad:
-
-```swift
-var name = "Heng"
-```
-
-if it never changes.
-
-Better:
-
-```swift
-let name = "Heng"
-```
-
----
-
-## Mistake 3 — Huge functions
-
-Bad:
-
-```swift
-func processEverything() {
-    // hundreds of lines
-}
-```
-
-Better:
-
-```swift
-func validate() {
-}
-
-func process() {
-}
-
-func save() {
-}
-```
-
----
-
-## Mistake 4 — Strong reference cycles
-
-Bad architecture can create:
+Before calling yourself an advanced Swift developer, understand these deeply:
 
 ```text
-Object A
-   ↓
-Object B
-   ↓
-Object A
-```
-
-Use `weak` where appropriate.
-
----
-
-# 65. Useful Swift Commands
-
-Check Swift:
-
-```bash
-swift --version
-```
-
-Create package:
-
-```bash
-swift package init --type executable
-```
-
-Build:
-
-```bash
-swift build
-```
-
-Run:
-
-```bash
-swift run
-```
-
-Test:
-
-```bash
-swift test
-```
-
-Release build:
-
-```bash
-swift build -c release
-```
-
----
-
-# 66. Final Cheat Sheet
-
-## Variables
-
-```swift
-let constant = 10
-var variable = 20
-```
-
-## Optional
-
-```swift
-var name: String? = nil
-```
-
-## Function
-
-```swift
-func add(_ a: Int, _ b: Int) -> Int {
-    a + b
-}
-```
-
-## Struct
-
-```swift
-struct User {
-    let name: String
-}
-```
-
-## Class
-
-```swift
-class User {
-    let name: String
-
-    init(name: String) {
-        self.name = name
-    }
-}
-```
-
-## Protocol
-
-```swift
-protocol Animal {
-    func speak()
-}
-```
-
-## Enum
-
-```swift
-enum Status {
-    case loading
-    case success
-    case failure
-}
-```
-
-## Closure
-
-```swift
-let add: (Int, Int) -> Int = {
-    $0 + $1
-}
-```
-
-## Generic
-
-```swift
-func identity<T>(_ value: T) -> T {
-    value
-}
-```
-
-## Async/Await
-
-```swift
-func load() async throws -> String {
-    "Data"
-}
-```
-
-## Actor
-
-```swift
-actor Counter {
-    var value = 0
-}
-```
-
----
-
-# 67. Final Learning Path
-
-If you are starting Swift from zero, follow this order:
-
-```text
-01. Syntax
-02. Variables
-03. Constants
-04. Types
-05. Operators
-06. Strings
-07. Conditions
-08. Loops
-09. Arrays
-10. Sets
-11. Dictionaries
-12. Functions
-13. Optionals
-14. Guard
-15. Closures
-16. map/filter/reduce
-17. Structs
-18. Classes
-19. Properties
-20. Methods
-21. Initializers
-22. Enums
-23. Protocols
-24. Extensions
-25. Error Handling
-26. Generics
-27. Codable
-28. JSON
-29. Networking
-30. Async/Await
-31. Actors
-32. Concurrency
-33. Memory Management
-34. Dependency Injection
-35. Testing
-36. SwiftUI
-37. MVVM
-38. Architecture
-39. Performance
-40. Production App
-```
-
----
-
-# 🚀 Practice Projects
-
-After completing the fundamentals, build these projects:
-
-### Beginner
-
-1. Calculator
-2. Number Guessing Game
-3. Todo List
-4. Temperature Converter
-5. Student Grade System
-
-### Intermediate
-
-6. Expense Tracker
-7. Contact Manager
-8. Notes App
-9. Weather App
-10. Quiz Application
-
-### Advanced
-
-11. REST API Client
-12. Authentication App
-13. E-Commerce App
-14. Chat Application
-15. Banking Application
-16. Social Media Application
-
-### Professional
-
-17. Clean Architecture App
-18. MVVM + REST API
-19. Offline-first Application
-20. Production iOS Application
-
----
-
-# 🎯 Goal
-
-By completing this guide, you should understand:
-
-```text
-Swift Fundamentals
-        ↓
-Object-Oriented Programming
-        ↓
-Protocol-Oriented Programming
-        ↓
+Value Semantics
+Reference Semantics
+Optionals
+Protocols
 Generics
-        ↓
-Error Handling
-        ↓
+Closures
+ARC
 Memory Management
-        ↓
-Networking
-        ↓
 Concurrency
-        ↓
-SwiftUI
-        ↓
-MVVM
-        ↓
+Actors
+Sendable
+async/await
+Error Handling
+Codable
+Swift Package Manager
 Testing
-        ↓
-Architecture
-        ↓
-Production Applications
+SwiftUI
+Dependency Injection
+Protocol-Oriented Programming
+```
+
+---
+
+# 🏗️ Recommended Real-World Architecture
+
+A scalable Swift application can be organized like:
+
+```text
+Presentation
+     ↓
+ViewModel
+     ↓
+Use Case
+     ↓
+Repository
+     ↓
+Service
+     ↓
+API / Database
+```
+
+Example:
+
+```text
+SwiftUI View
+     ↓
+UserViewModel
+     ↓
+GetUserUseCase
+     ↓
+UserRepository
+     ↓
+APIClient
+     ↓
+REST API
+```
+
+This separation makes large projects easier to:
+
+* Test
+* Maintain
+* Scale
+* Debug
+* Refactor
+
+---
+
+# 📦 Useful Swift Technologies
+
+## Apple App Development
+
+```text
+Swift
+SwiftUI
+UIKit
+Foundation
+Combine
+Observation
+Core Data
+SwiftData
+CloudKit
+MapKit
+AVFoundation
+StoreKit
+UserNotifications
+```
+
+## Backend
+
+```text
+Swift
+Vapor
+Hummingbird
+SwiftNIO
+```
+
+## Tools
+
+```text
+Xcode
+Swift Package Manager
+SwiftPM
+Swift Testing
+DocC
+VS Code
+LLDB
+```
+
+Swift's official documentation covers the language, standard library, testing, Swift Package Manager, DocC, Apple platforms, Linux, Windows, WebAssembly, and embedded Swift.
+
+---
+
+# 🧪 Final Practice Project
+
+After finishing this guide, build:
+
+## 📱 Task Management App
+
+Features:
+
+```text
+Authentication
+    ↓
+Login
+    ↓
+Register
+    ↓
+Home
+    ↓
+Tasks
+    ├── Create
+    ├── Update
+    ├── Delete
+    ├── Complete
+    └── Search
+    ↓
+Profile
+    ├── Name
+    ├── Email
+    └── Logout
+```
+
+Recommended architecture:
+
+```text
+SwiftUI
+   ↓
+MVVM
+   ↓
+Use Cases
+   ↓
+Repository
+   ↓
+API Client
+   ↓
+REST API
+```
+
+Recommended concepts:
+
+```text
+Swift
+SwiftUI
+async/await
+Actor
+Sendable
+Codable
+URLSession
+Dependency Injection
+Protocols
+Generics
+Swift Testing
+Swift Package Manager
+```
+
+---
+
+# 📚 Official Resources
+
+* Swift official website
+* The Swift Programming Language
+* Swift Documentation
+* Swift Package Manager
+* Swift API Design Guidelines
+* Swift Testing
+* Swift Evolution
+
+The Swift Programming Language is the authoritative language reference, while Swift.org provides getting-started material and documentation for Swift's ecosystem.
+
+---
+
+# 🎯 Final Goal
+
+The recommended progression is:
+
+```text
+                    SWIFT
+                      │
+        ┌─────────────┴─────────────┐
+        │                           │
+    BEGINNER                    INTERMEDIATE
+        │                           │
+ Variables                    Struct / Class
+ Functions                    Protocol
+ Collections                  Enum
+ Optionals                    Closure
+ Conditions                   Generics
+        │                           │
+        └─────────────┬─────────────┘
+                      │
+                   ADVANCED
+                      │
+              async / await
+                  Actors
+                 Sendable
+                   ARC
+               Concurrency
+              Architecture
+                      │
+                      ▼
+                PROFESSIONAL
+                      │
+             ┌────────┴────────┐
+             │                 │
+          SwiftUI           Backend
+             │                 │
+            iOS              Vapor
+             │                 │
+             └────────┬────────┘
+                      │
+                      ▼
+               REAL PROJECTS
 ```
 
 ---
 
 # ⭐ Summary
 
-Swift is more than just syntax.
-
-To become a strong Swift developer, focus on:
+If you are starting from zero, follow this order:
 
 ```text
-Language Fundamentals
-        +
-Data Structures
-        +
-Protocols
-        +
-Generics
-        +
-Memory Management
-        +
-Concurrency
-        +
-Networking
-        +
-Testing
-        +
-Architecture
-        +
-Real Projects
+01. Syntax
+02. Variables
+03. Types
+04. Operators
+05. Conditions
+06. Loops
+07. Collections
+08. Functions
+09. Optionals
+10. Structs
+11. Enums
+12. Classes
+13. Protocols
+14. Extensions
+15. Closures
+16. Error Handling
+17. Generics
+18. Codable
+19. Foundation
+20. Networking
+21. async/await
+22. Actors
+23. Sendable
+24. SwiftUI
+25. MVVM
+26. Dependency Injection
+27. Testing
+28. Swift Package Manager
+29. Architecture
+30. Real-world projects
 ```
 
-> 🇬🇧 **English:** Don't only read Swift. Write Swift every day, build projects, debug errors, and learn how to design maintainable applications.
->
-> 🇰🇭 **ខ្មែរ:** កុំត្រឹមតែអាន Swift។ ត្រូវសរសេរ Swift រាល់ថ្ងៃ បង្កើត Project ពិតៗ រៀន Debug Error និងរៀនរចនា Application ដែលងាយស្រួល Maintain។
+**The most important rule:**
+
+> Don't just read Swift. Write Swift.
+
+Build small projects, make mistakes, debug them, and gradually move from simple programs to complete applications.
 
 ---
 
-## 📌 One-Line Swift Philosophy
+## 🇰🇭 សង្ខេបជាភាសាខ្មែរ
+
+បើអ្នកចាប់ផ្តើម Swift ពីសូន្យ សូមរៀនតាមលំដាប់៖
 
 ```text
-Write safe code.
-Write clear code.
-Write maintainable code.
-Build real applications.
+Syntax
+↓
+Variable / Constant
+↓
+Data Type
+↓
+Condition
+↓
+Loop
+↓
+Array / Set / Dictionary
+↓
+Function
+↓
+Optional
+↓
+Struct
+↓
+Enum
+↓
+Class
+↓
+Protocol
+↓
+Extension
+↓
+Closure
+↓
+Error Handling
+↓
+Generic
+↓
+Codable
+↓
+Networking
+↓
+async / await
+↓
+Actor
+↓
+SwiftUI
+↓
+MVVM
+↓
+Dependency Injection
+↓
+Testing
+↓
+Architecture
+↓
+Real Project
 ```
 
-**Happy Coding with Swift! 🦅**
+គោលដៅចុងក្រោយគឺ **មិនត្រឹមតែចេះ syntax ទេ ប៉ុន្តែអាចបង្កើត project ពិតប្រាកដបាន**។
+
+---
+
+## 📖 Official Documentation
+
+The official Swift documentation is the best reference when you need exact language/API behavior:
+
+[Swift Documentation](https://docs.swift.org/?utm_source=chatgpt.com)
+
+[The Swift Programming Language](https://www.swift.org/documentation/tspl/?utm_source=chatgpt.com)
+
+[Swift Getting Started](https://www.swift.org/getting-started/?utm_source=chatgpt.com)
+
+[Swift API Design Guidelines](https://www.swift.org/documentation/api-design-guidelines/?utm_source=chatgpt.com)
